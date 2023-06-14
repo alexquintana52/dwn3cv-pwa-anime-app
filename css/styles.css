@@ -1,23 +1,87 @@
-/*=== Google Fonts 'Inter' Import ===*/
+/*=== Google Fonts 'Inter' & Furore Import ===*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('../font/style.css');
+
+/*=== Variables ===*/
+:root {
+
+    /* Colors */
+    --clr-primary: #c41122;
+
+    /* Global Variables */
+    --ff-inter: 'Inter', sans-serif;
+    --ff-furore: 'Furore', sans-serif;
+
+}
+
 
 /*=== Global Styles ===*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-inter);
 }
 
-button {
+h1,h2,
+h3,h4,
+h5,h6 {
+    font-family: var(--ff-furore);
+}
+
+h1 > span,
+h2 > span,
+h3 > span,
+h4 > span,
+h5 > span,
+h6 > span {
+    font-family: var(--ff-furore);
+    color: var(--clr-primary);
+}
+
+.text-danger-2 {
+    color: var(--clr-primary);
+}
+
+.btn-danger-2 {
+    background-color: var(--clr-primary);
+    color: #fbfbfb;
     border: 0;
     outline: 0;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-danger-2:hover {
+    background-color: #b41020;
 }
 
-a {
-    text-decoration: none;
+/*=== Navbar ===*/
+
+.nav-link {
+    font-weight: 500;
+    color: #e0e0e0;
 }
 
-li {
-    list-style: none;
+.nav-link:hover {
+    color: var(--clr-primary);
+}
+
+/*=== Anime List Content ===*/
+
+.anime-card {
+    cursor: pointer;
+}
+
+.anime-card img {
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.anime-card:hover img {
+    transform: scale(1.02);
 }
