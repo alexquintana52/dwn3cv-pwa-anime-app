@@ -23,18 +23,16 @@
     font-family: var(--ff-inter);
 }
 
-h1,h2,
-h3,h4,
-h5,h6 {
+a {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+.header-title {
     font-family: var(--ff-furore);
 }
 
-h1 > span,
-h2 > span,
-h3 > span,
-h4 > span,
-h5 > span,
-h6 > span {
+.header-title > span {
     font-family: var(--ff-furore);
     color: var(--clr-primary);
 }
@@ -84,4 +82,97 @@ h6 > span {
 
 .anime-card:hover img {
     transform: scale(1.02);
+}
+
+/*=== Anime Search ===*/
+.no-results {
+    display: none;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+.search-box input {
+    display: inline-block;
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.search-btn button {
+    display: inline-block;
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/*=== Anime Details ===*/
+
+.anime-main {
+    background-color: #efefef;
+}
+
+.anime-state {
+    max-width: 320px;
+    width: 100%;
+}
+
+.state-red {
+    background-color: #e91f40;
+    text-transform: uppercase;
+}
+
+.state-green {
+    background-color: #21ba57;
+    text-transform: uppercase
+}
+
+.state-purple {
+    background-color: #c504e4;
+    text-transform: uppercase
+}
+
+.fav-body {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.title-bg {
+    min-height: 30vh;
+    background-color: #090909;
+    color: #fbfbfb;
+    display: flex;
+    align-items: center;   
+}
+
+.anime-trailer {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.group-data {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.anime-premier {
+    text-transform: capitalize;
 }
