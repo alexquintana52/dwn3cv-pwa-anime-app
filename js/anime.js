@@ -1,5 +1,3 @@
-import { addFav } from "./favourite.js";
-
 let URLAnime = document.URL.split("#").pop();
 console.log(document.URL);
 console.log(URLAnime);
