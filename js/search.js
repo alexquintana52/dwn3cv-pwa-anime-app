@@ -14,14 +14,12 @@ const searchAnime = () => {
     fetch(`https://api.jikan.moe/v4/anime?q=${searchBox.value}&limit=24`)
     .then(response => response.json())
     .then(data => {
-        console.log(data.data.length);
-        console.log(data);
         let searchAnime = '';
         data.data.forEach(anime => {
             searchAnime += `
                 <a href="anime.html#${anime.mal_id}" class="col-12 col-md-6 col-lg-3" id="${anime.mal_id}">
                     <div class="anime-card anime-search-card">
-                        <img src="${anime.images.jpg.large_image_url}" class="img-fluid search-anime-img" alt="Portada de ${anime.title}">
+                        <img src="${anime.images.webp.large_image_url}" class="img-fluid search-anime-img" alt="Portada de ${anime.title}">
                         <p class="py-3">${anime.title}</p>
                     </div>
                 </a>

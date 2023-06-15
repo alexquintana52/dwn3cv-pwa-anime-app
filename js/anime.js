@@ -6,8 +6,6 @@ const getAnimeDetail = () => {
     fetch(`https://api.jikan.moe/v4/anime/${URLAnime}/full`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-
         const animeTitle = document.querySelector('.anime-title');
         const animeTitleJP = document.querySelector('.anime-title-jp');
         const animeDemographic = document.querySelector('.anime-demographic');
@@ -23,22 +21,27 @@ const getAnimeDetail = () => {
 
         animeTitle.innerHTML = data.data.title;
         animeTitleJP.innerHTML = data.data.title_japanese;
+
         data.data.demographics.forEach(demo => {
             animeDemographic.innerHTML += `
             <span class="badge text-bg-danger rounded-pill py-2 px-3 my-1 me-1">${demo.name}</span>
             `;
         })
-        animeImg.src = data.data.images.jpg.large_image_url;
+
+        animeImg.src = data.data.images.webp.large_image_url;
+
         if(data.data.synopsis == null){
             animeSyn.innerHTML = "No Synopsis";
         } else if(data.data.synopsis){
             animeSyn.innerHTML = data.data.synopsis;
         }
+
         data.data.genres.forEach(genre => {
             animeGenre.innerHTML += `
                 <span class="badge text-bg-danger rounded-pill py-2 px-3 my-1 me-1">${genre.name}</span>
             `;
         });
+
         if(data.data.status == "Finished Airing") {
             animeState.innerHTML = "Finished Airing";
             animeState.classList.add("state-red");
@@ -49,6 +52,7 @@ const getAnimeDetail = () => {
             animeState.innerHTML = "Not Yet Aired";
             animeState.classList.add("state-purple");
         };
+        
         if(data.data.trailer.embed_url == null){
             document.querySelector('.anime-video').innerHTML = `
                 <span class="text-danger-2 d-flex align-items-center gap-1">

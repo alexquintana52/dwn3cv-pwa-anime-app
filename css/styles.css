@@ -56,6 +56,10 @@ a {
 
 /*=== Navbar ===*/
 
+.logo {
+    width: 100px;
+}
+
 .nav-link {
     font-weight: 500;
     color: #e0e0e0;
@@ -122,6 +126,10 @@ a {
 
 .anime-main {
     background-color: #efefef;
+}
+
+.anime-img {
+    width: 320px;
 }
 
 .anime-state {

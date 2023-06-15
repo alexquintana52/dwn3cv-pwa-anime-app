@@ -5,4 +5,5 @@
     font-style: normal;
     font-weight: normal;
     src: local('Furore'), url('Furore.woff') format('woff');
+    font-display: swap;
     }
