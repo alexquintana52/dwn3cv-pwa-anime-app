@@ -132,7 +132,16 @@ a {
     width: 320px;
 }
 
+.manga-img {
+    width: 320px;
+}
+
 .anime-state {
+    max-width: 320px;
+    width: 100%;
+}
+
+.manga-state {
     max-width: 320px;
     width: 100%;
 }
@@ -163,7 +172,7 @@ a {
 }
 
 .title-bg {
-    min-height: 30vh;
+    min-height: 35vh;
     background-color: #090909;
     color: #fbfbfb;
     display: flex;

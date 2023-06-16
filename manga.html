@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,11 @@
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
     <!--=== Bootstrap CSS Import ===-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!--=== Boxicons Import ===-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--=== CSS File Import ===-->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-
 <body class="anime-main">
-
+    
     <!--=== Header / Nav Section ===-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
@@ -45,68 +41,63 @@
 
     <!--=== Main Section ===-->
     <main>
-        <section class="anime-details">
+        <section class="manga-details">
             <div class="title-bg">
                 <div class="container text-center text-lg-start">
-                    <h1 class="anime-title"></h1>
-                    <p class="fs-5 anime-title-jp text-danger"></p>
-                    <div class="anime-demographic"></div>
+                    <h1 class="manga-title"></h1>
+                    <p class="fs-5 manga-title-jp text-danger"></p>
+                    <div class="manga-demographic"></div>
                 </div>
             </div>
             <div class="container mt-3">
                 <div class="row gy-3">
                     <aside class="col-12 col-lg-4 text-center mb-2">
                         <div class="front-img">
-                            <img src="" class="img-fluid anime-img rounded-3" alt="portada">
+                            <img src="" class="img-fluid manga-img rounded-3" alt="portada">
                         </div>
                         <div class="text-center">
-                            <span class="fs-6 px-5 py-3 badge mt-2 anime-state"></span>
+                            <span class="fs-6 px-5 py-3 badge mt-2 manga-state"></span>
                         </div>
-                        <button class="btn-danger-2 text-center fav-body py-3 mt-2 rounded-3" id="add-fav">
-                            <i class='bx bxs-heart fs-5'></i>
-                            <span>Add to Favourites</span>
-                        </button>
                         <div class="text-start">
                             <ul class="list-group group-data">
                                 <li class="list-group-item py-3 rounded-3 mt-2 border-0">
                                     <span class="fw-bold">Type: </span>
-                                    <span class="anime-type text-secondary"></span>
+                                    <span class="manga-type text-secondary"></span>
                                 </li>
                                 <li class="list-group-item py-3 rounded-3 mt-2 border-0">
-                                    <span class="fw-bold">Episodes: </span>
-                                    <span class="anime-episodes text-secondary"></span>
+                                    <span class="fw-bold">Chapters: </span>
+                                    <span class="manga-chapters text-secondary"></span>
                                 </li>
                                 <li class="list-group-item py-3 rounded-3 mt-2 border-0">
-                                    <span class="fw-bold">Premiered: </span>
-                                    <span class="anime-premier text-secondary"></span>
+                                    <span class="fw-bold">Volumes: </span>
+                                    <span class="manga-volumes text-secondary"></span>
                                 </li>
-                              </ul>
+                                <li class="list-group-item py-3 rounded-3 mt-2 border-0">
+                                    <span class="fw-bold">Authors: </span>
+                                    <span class="manga-author text-secondary"></span>
+                                </li>
+                            </ul>
                         </div>
                     </aside>
                     <div class="col-12 col-lg-8 mb-4">
-                        <div class="anime-summary mb-4 bg-white p-4 rounded-3">
+                        <div class="manga-summary mb-4 bg-white p-4 rounded-3">
                             <h2 class="fw-bold fs-4">Synopsis</h2>
-                            <div class="anime-genres my-3"></div>
-                            <p class="anime-synopsis text-secondary"></p>
+                            <div class="manga-genres my-3"></div>
+                            <p class="manga-synopsis text-secondary"></p>
                         </div>
                         <div class="bg-white p-4 rounded-3">
-                            <h2 class="fw-bold fs-4">Video</h2>
-                            <div class="mt-4 anime-video">
-                                <iframe class="anime-trailer rounded-3" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                            </div>
+                            <h2 class="fw-bold fs-4">About The Manga</h2>
+                            <p class="manga-info text-secondary"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <!--=== Bootstrap JS Import ===-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!--=== JS File Import ===-->
-    <script src="./js/anime.js"></script>
+    <script src="./js/manga.js"></script>
 </body>
-
 </html>

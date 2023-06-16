@@ -13,14 +13,14 @@ btnPrev.addEventListener('click', () => {
 });
 
 btnNext.addEventListener('click', () => {
-    if(page < 3){
+    if(page < 7){
         page += 1;
         getAnimeList();
     };
 });
 
 const getAnimeList = () => {
-    fetch(`https://api.jikan.moe/v4/seasons/now?page=${page}&limit=20`)
+    fetch(`https://api.jikan.moe/v4/seasons/now?sfw&page=${page}&limit=20`)
     .then(response => response.json())
     .then(data => {
         let animes = '';
@@ -36,7 +36,7 @@ const getAnimeList = () => {
         });
 
         results.innerHTML = animes;
-    });
-
-}
+    })
+    .catch(error => console.log(error));
+};
 getAnimeList();

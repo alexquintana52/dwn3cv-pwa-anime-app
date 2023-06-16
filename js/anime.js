@@ -2,18 +2,14 @@ let URLAnime = document.URL.split("#").pop();
 console.log(document.URL);
 console.log(URLAnime);
 
-const favBtn = document.getElementById('add-fav');
-
-favBtn.addEventListener('click', () => {
-    addFav();
-});
-
 const getAnimeDetail = () => {
     fetch(`https://api.jikan.moe/v4/anime/${URLAnime}/full`)
     .then(response => response.json())
     .then(data => {
 
-        console.log(data.data)
+        document.title = `
+            Quintana Alex | Anime.io | ${data.data.title}
+        `;
 
         const animeTitle = document.querySelector('.anime-title');
         const animeTitleJP = document.querySelector('.anime-title-jp');
@@ -35,7 +31,7 @@ const getAnimeDetail = () => {
             animeDemographic.innerHTML += `
             <span class="badge text-bg-danger rounded-pill py-2 px-3 my-1 me-1">${demo.name}</span>
             `;
-        })
+        });
 
         animeImg.src = data.data.images.webp.large_image_url;
 
@@ -43,7 +39,7 @@ const getAnimeDetail = () => {
             animeSyn.innerHTML = "No Synopsis";
         } else if(data.data.synopsis){
             animeSyn.innerHTML = data.data.synopsis;
-        }
+        };
 
         data.data.genres.forEach(genre => {
             animeGenre.innerHTML += `
@@ -71,22 +67,20 @@ const getAnimeDetail = () => {
             `;
         } else if(data.data.trailer.embed_url){
             animeVideo.src = data.data.trailer.embed_url;
-        }
+        };
         
         animeType.innerHTML = data.data.type;
         animeEps.innerHTML = data.data.episodes;
+
         if(data.data.season == null){
             animePremier.innerHTML = 'No Premier'
         } else if(data.data.season){
             animePremier.innerHTML = `
                 ${data.data.season} ${data.data.year}
             `;
-        }
-    });
+        };
+    })
+    .catch(error => console.log(error));
 };
 
 getAnimeDetail();
-
-/**
- * ${data.data.synopsis = 'null' ? 'No Synopsis' : data.data.synopsis}
- */

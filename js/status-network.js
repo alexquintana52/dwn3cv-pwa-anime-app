@@ -9,5 +9,5 @@ window.addEventListener('online', event => {
 });
 
 if(!navigator.onLine){
-    console.log('Estas sin Conexión')
-}
+    console.log('Estas sin Conexión');
+};
