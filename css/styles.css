@@ -28,6 +28,23 @@ a {
     color: #1b1b1b;
 }
 
+body {
+    background-color: #0c0c0c;
+    animation: pageTransition 0.45s;
+}
+
+@keyframes pageTransition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
 .header-title {
     font-family: var(--ff-furore);
 }
