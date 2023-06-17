@@ -1,7 +1,7 @@
 const CACHE_NAME = 'version1';
 
 importScripts(
-    'https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/7.0.0/workbox-sw.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/6.0.2/workbox-sw.js'
 );
 
 self.addEventListener('message', event => {
